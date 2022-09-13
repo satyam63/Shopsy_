@@ -1,0 +1,10 @@
+a:hover {
+    background-color: rgba(37, 152, 37, 0.571);
+
+}
+
+.head {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,96,121,1) 35%, rgba(0,212,255,1) 100%);
+
+}

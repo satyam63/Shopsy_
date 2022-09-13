@@ -1,0 +1,80 @@
+<app-navbar></app-navbar>
+<div style=" height:680px ;background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,96,121,1) 35%, rgba(0,212,255,1) 100%);
+">
+    <section class="vh-100">
+        <div class="container h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-lg-12 col-xl-11">
+                    <div class="card text-black" style="border-radius: 25px;">
+                        <div class="card-body p-md-5">
+                            <div class="row justify-content-center">
+                                <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+                                    <div class="{{'alert ' +responseClass}}" *ngIf="responseText" role="alert">
+
+                                        {{responseText}}
+
+                                    </div>
+
+                                    <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Log In</p>
+
+                                    <form class="mx-1 mx-md-4" #loginData="ngForm"
+                                        (submit)=" onsubmitHandler(loginData.value)">
+
+
+
+                                        <div class="d-flex flex-row align-items-center mb-4">
+                                            <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                                            <div class="form-outline flex-fill mb-0">
+                                                <label class="form-label" for="form3Example3c">Email</label>
+                                                <input #email="ngModel" type="email" name="email"
+                                                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" [class.is-invalid]="email.invalid && email
+                                                    .touched"
+                                                    id="form3Example3c" class="form-control" required ngModel>
+                                                    <small class="text-danger" [class.d-none]="email.valid||email.untouched" *ngIf="email.errors?.['reduired']">This is Requried</small>
+                                                    <small class="text-danger" *ngIf="email.errors?.['pattern']">Email is Invalid</small>
+
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-row align-items-center mb-4">
+                                            <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                                            <div class="form-outline flex-fill mb-0">
+                                                <label class="form-label" for="form3Example4c">Password</label>
+                                                <input type="password" #password="ngModel" name="password" required id="form3Example4c"
+                                                    class="form-control" [class.is-invalid]="password.invalid && password.untouched" ngModel>
+                                                    <small [class.d-none]="password.valid||password.untouched" *ngIf="password.errors?.['required']" >This is Requried</small>
+
+                                            </div>
+                                        </div>
+
+
+                                        <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                                            
+                                            <input type="submit"  [disabled]="loginData.form.invalid"
+                                                class="btn btn-primary btn-lg" />
+                                            
+                                             
+                                        </div>
+                                        <a class="nav-link text-center text-link" routerLink="/register">New User? Create new account</a>
+                                            
+
+
+                                    </form>
+
+
+                                </div>
+                                <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+
+                                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
+                                        class="img-fluid" alt="Sample image">
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

@@ -1,0 +1,13 @@
+#btnn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(7, 147, 47);
+
+
+}
+#btnn:hover{
+    background-color: rgb(20, 186, 70);
+    transition: 1s;
+
+}

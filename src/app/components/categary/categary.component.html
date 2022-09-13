@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="col-lg-3" *ngFor="let grocary of  categories">
+        <div class="card">
+            <img class="card-img-top" src="{{'http://rjtmobile.com/grocery/images/'+grocary.catImage}}"
+                alt="Card image cap">
+            <div class="card-body">
+                
+                <h5 class="card-title">{{grocary.catName}}</h5>
+                <a routerLink="/product/:id" (click)="onbtnclick(grocary.catId)" class="btn btn-primary " id="btnn">Buy Now</a>
+            </div>
+        </div>
+    </div>
+
+</div>
